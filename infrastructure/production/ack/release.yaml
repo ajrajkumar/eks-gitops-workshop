@@ -7,7 +7,7 @@ spec:
   releaseName: s3-chart
   chart:
     spec:
-      chart: ./helm
+      chart: ./helm/
       sourceRef:
         kind: GitRepository
         name: s3-controller
