@@ -1,0 +1,14 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmChart
+metadata:
+  name: s3-controller
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  chart: s3-controller
+  reconcileStrategy: ChartVersion
+  sourceRef:
+    kind: HelmRepository
+    name: s3-controller
+  version: '5.*'

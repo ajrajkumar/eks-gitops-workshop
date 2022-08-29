@@ -4,12 +4,12 @@ metadata:
   name: s3-controller
   namespace: flux-system
 spec:
+  releaseName: s3-chart
   chart:
     spec:
-      chart: s3-chart
-      version: v0.1.4
+      chart: ./helm
       sourceRef:
-        kind: HelmRepository
+        kind: GitRepository
         name: s3-controller
         namespace: flux-system
   interval: 1h0m0s
