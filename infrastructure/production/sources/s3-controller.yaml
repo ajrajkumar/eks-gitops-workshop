@@ -1,11 +1,12 @@
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta1
-kind: GitRepository
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
 metadata:
   name: s3-controller
   namespace: flux-system
 spec:
-  interval: 30s
+  interval: 5m0s
+  url: oci://public.ecr.aws/aws-controllers-k8s/s3-chart
   ref:
-    tag: v0.1.4
-  url: https://github.com/aws-controllers-k8s/s3-controller
+    tag: latest
+
