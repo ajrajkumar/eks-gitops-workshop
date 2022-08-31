@@ -13,3 +13,7 @@ spec:
         kind: HelmRepository
         name: ack
         namespace: flux-system
+  values:
+    aws:
+      region: "us-east-1"
+
